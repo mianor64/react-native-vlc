@@ -1,5 +1,5 @@
 {
-  "name": "react-native-vlc-player",
+  "name": "react-native-vlc-player-comp",
   "version": "0.0.1",
   "description": "A <VLCPlayer /> element for react-native",
   "main": "VLCPlayer.js",
