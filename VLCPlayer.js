@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactNative from 'react-native'
+import ReactNative, { TouchableOpacity } from 'react-native'
 import PropTypes from 'prop-types'
 
 const {
@@ -97,7 +97,7 @@ export default class VLCPlayer extends Component {
     const {
       source
     } = this.props
-    source.initOptions = source.initOptions || []
+    //source.initOptions = source.initOptions || []
     // repeat the input media
     const nativeProps = Object.assign({}, this.props)
     Object.assign(nativeProps, {
@@ -114,7 +114,9 @@ export default class VLCPlayer extends Component {
     })
 
     return (
-      <RCTVLCPlayer ref={this._assignRoot} {...nativeProps} />
+      <TouchableOpacity onPress={this.props.onPress}>
+        <RCTVLCPlayer ref={this._assignRoot} {...nativeProps} />
+      </TouchableOpacity>
     )
   }
 }
